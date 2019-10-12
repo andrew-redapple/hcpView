@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Tasks from "./components/Tasks";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  state = {
+    tasks: [
+      {
+        id: 1,
+        title: "Task1",
+        subtitle: "Task1.1",
+        isComplete: true
+      },
+      {
+        id: 2,
+        title: "Task2",
+        subtitle: "Task2.1",
+        isComplete: false
+      },
+      {
+        id: 3,
+        title: "Task3",
+        subtitle: "Task3.1",
+        isComplete: false
+      }
+    ]
+  };
+  render() {
+    return (
+      <div className="App">
+        <div className="tasks">
+          <Tasks tasks={this.state.tasks} />
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
