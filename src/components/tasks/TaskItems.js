@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { render } from "react-dom";
 import { Container, Row, Col } from "react-bootstrap";
+import "./Tasks.css";
 
 export class TaskItems extends Component {
   render() {

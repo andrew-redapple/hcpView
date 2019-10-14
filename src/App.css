@@ -3,36 +3,18 @@
   padding: 0;
 }
 
-body, html {
+body,
+html {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.4;
 }
 
-a {
-  color: #333;
-  text-decoration: none;
-}
-
-.taskItem {
-    background: #f4f4f4;
-    width: 100px;
-    height: 100px;
-    border-radius: 15%;
-    margin: 5px;
-    display: flex;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    justify-content: center;
-    align-items: center;
-}
-
-h6 {
-    text-align: center;
-}
-
 .tasks {
-    display: flex;
-    width: 80vw;
+  display: flex;
+  width: 80vw;
+  margin-top: 40px;
+}
+
+.App {
+  height: 100%;
 }
