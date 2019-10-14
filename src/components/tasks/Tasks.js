@@ -4,11 +4,7 @@ import TaskItems from "./TaskItems";
 
 class Tasks extends Component {
   render() {
-    return this.props.tasks.map(task => (
-      // <div className="task">
-      <TaskItems task={task} />
-      // </div>
-    ));
+    return this.props.tasks.map(task => <TaskItems task={task} />);
   }
 }
 

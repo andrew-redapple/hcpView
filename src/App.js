@@ -27,6 +27,24 @@ class App extends React.Component {
         subtitle: "Task3.1",
         isComplete: false
       }
+      // {
+      //   id: 3,
+      //   title: "Task4",
+      //   subtitle: "Task4.1",
+      //   isComplete: true
+      // },
+      // {
+      //   id: 4,
+      //   title: "Task5",
+      //   subtitle: "Task5.1",
+      //   isComplete: false
+      // },
+      // {
+      //   id: 5,
+      //   title: "Task6",
+      //   subtitle: "Task6.1",
+      //   isComplete: false
+      // }
     ]
   };
 
@@ -43,12 +61,12 @@ class App extends React.Component {
   };
   render() {
     let backDrop;
-    // let sideNav;
+    let tasks = this.state.tasks;
 
     if (this.state.sideNavOpen) {
       backDrop = <BackDrop click={this.backDropClickHandler} />;
-      // sideNav = <SideNav />;
     }
+
     return (
       <div className="App">
         <TopNav hamburgerClickHandler={this.sideNavClickHandler} />

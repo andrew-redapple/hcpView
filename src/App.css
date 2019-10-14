@@ -11,8 +11,18 @@ html {
 
 .tasks {
   display: flex;
-  width: 80vw;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  width: 100%;
   margin-top: 40px;
+  padding-left: 25px;
+}
+
+@media (max-width: 768px) {
+  .tasks {
+  }
 }
 
 .App {

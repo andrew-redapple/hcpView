@@ -10,7 +10,10 @@ export default function SideNav(props) {
   }
   return (
     <nav className={sideNavClasses}>
+      <div className="sideNav__profileImg"></div>
+      <div className="spacing"></div>
       <ul>
+        <div className="separator" />
         <li>
           <a href="/">Settings</a>
         </li>

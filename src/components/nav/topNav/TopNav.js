@@ -16,8 +16,8 @@ export default function topNav(props) {
         <div className="topNav__navigation-items">
           <ul>
             <li>
-              <a href="#">Settings</a>
-              <a href="#">Logout</a>
+              <a href="/">Settings</a>
+              <a href="/">Logout</a>
             </li>
           </ul>
         </div>
