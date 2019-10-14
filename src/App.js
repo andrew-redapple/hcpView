@@ -70,7 +70,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <TopNav hamburgerClickHandler={this.sideNavClickHandler} />
-        <SideNav show={this.state.sideNavOpen} />
+        <SideNav show={this.state.sideNavOpen} tasks={this.state.tasks} />
         {backDrop}
         <div className="tasks">
           <Tasks tasks={this.state.tasks} />

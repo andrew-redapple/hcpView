@@ -54,10 +54,18 @@
   background: #d3d3d3;
   border: solid black;
   border-radius: 50%;
-  width: 170px;
-  height: 170px;
-  margin-left: 85px;
   margin-top: 60px;
+}
+
+.sideNav__tasks {
+  display: flex;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  border-radius: 15%;
+  margin-top: 40px;
+  margin-left: 10px;
 }
 
 @media (min-width: 769px) {
@@ -66,6 +74,10 @@
     height: 180px;
     margin-left: 80px;
   }
+
+  .sideNav__tasks {
+    margin-left: 5px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -73,5 +85,9 @@
     width: 50%;
     height: 20%;
     margin-left: 25%;
+  }
+
+  .sideNav__tasks {
+    margin-left: 3px;
   }
 }
