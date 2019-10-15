@@ -1,13 +1,14 @@
 import React from "react";
 import "./SideNav.css";
 import "../../../App.css";
-import "../../tasks/Tasks.css";
+import "../../tasks/TaskItems.css";
 import TaskItems from "../../tasks/TaskItems";
 
 export default function SideNav(props) {
   let sideNavClasses = "sideNav";
-  let sideTasks;
+  // let sideTasks;
   console.log(props.show);
+
   // if sideNavOpen is true, append open to sideNav class
   if (props.show) {
     sideNavClasses = "sideNav open";
@@ -17,7 +18,7 @@ export default function SideNav(props) {
       <div className="sideNav__profileImg"></div>
       <div className="sideNav__tasks">
         {props.tasks.map(task => (
-          <TaskItems task={task} />
+          <TaskItems key={task.id} task={task} />
         ))}
       </div>
 

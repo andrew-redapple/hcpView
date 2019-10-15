@@ -17,6 +17,8 @@ export default function topNav(props) {
           <ul>
             <li>
               <a href="/">Settings</a>
+            </li>
+            <li>
               <a href="/">Logout</a>
             </li>
           </ul>

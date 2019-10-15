@@ -12,40 +12,58 @@ class App extends React.Component {
     tasks: [
       {
         id: 1,
-        title: "Task1",
+        title: "Home",
         subtitle: "Task1.1",
         isComplete: true
       },
       {
         id: 2,
-        title: "Task2",
+        title: "Appt",
         subtitle: "Task2.1",
         isComplete: false
       },
       {
         id: 3,
-        title: "Task3",
+        title: "Msg",
         subtitle: "Task3.1",
         isComplete: false
+      },
+      {
+        id: 4,
+        title: "Analytics",
+        subtitle: "Task4.1",
+        isComplete: true
+      },
+      {
+        id: 5,
+        title: "Task5",
+        subtitle: "Task5.1",
+        isComplete: false
+      },
+      {
+        id: 6,
+        title: "Task6",
+        subtitle: "Task6.1",
+        isComplete: false
+      },
+      {
+        id: 7,
+        title: "Task7",
+        subtitle: "Task7.1",
+        isComplete: true
+      },
+      {
+        id: 8,
+        title: "Task8",
+        subtitle: "Task8.1",
+        isComplete: false
+      },
+      {
+        id: 9,
+        title: "Task9",
+        subtitle: "Task9.1",
+        isComplete: false
       }
-      // {
-      //   id: 3,
-      //   title: "Task4",
-      //   subtitle: "Task4.1",
-      //   isComplete: true
-      // },
-      // {
-      //   id: 4,
-      //   title: "Task5",
-      //   subtitle: "Task5.1",
-      //   isComplete: false
-      // },
-      // {
-      //   id: 5,
-      //   title: "Task6",
-      //   subtitle: "Task6.1",
-      //   isComplete: false
-      // }
     ]
   };
 
@@ -60,9 +78,10 @@ class App extends React.Component {
   backDropClickHandler = () => {
     this.setState({ sideNavOpen: false });
   };
+
   render() {
     let backDrop;
-    let tasks = this.state.tasks;
+    // let tasks = this.state.tasks;
 
     if (this.state.sideNavOpen) {
       backDrop = <BackDrop click={this.backDropClickHandler} />;

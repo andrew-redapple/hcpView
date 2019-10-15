@@ -4,7 +4,15 @@ import TaskItems from "./TaskItems";
 
 class Tasks extends Component {
   render() {
-    return this.props.tasks.map(task => <TaskItems task={task} />);
+    console.log(window.innerWidth);
+
+    if (window.innerWidth < 400 && this.props.tasks.length > 3) {
+      console.log(this.props.tasks.length);
+      // let beginningDiv = document.createElement("div");
+    }
+    return this.props.tasks.map(task => (
+      <TaskItems key={task.id} task={task} />
+    ));
   }
 }
 

@@ -25,22 +25,28 @@
 .topNav__logo a {
   color: #f4f4f4;
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .topNav__navigation-items {
   align-items: center;
-  height: 20px;
 }
 
 .topNav__navigation-items ul {
+  display: flex;
   list-style: none;
+  margin: 0 !important;
+}
+
+.topNav__navigation-items li {
+  padding: 0 15px;
 }
 
 .topNav__navigation-items a {
   color: #f4f4f4;
   margin: 5px;
   text-decoration: none;
+  font-size: 1.5rem;
 }
 
 .topNav__navigation-items a:hover,

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // import { render } from "react-dom";
 // import { Container, Row, Col } from "react-bootstrap";
-import "./Tasks.css";
+import "./TaskItems.css";
 
 export class TaskItems extends Component {
   render() {
@@ -15,7 +15,7 @@ export class TaskItems extends Component {
       //     {/* </Row> */}
       // </Container>
       <div className="taskItem">
-        <h6>{this.props.task.title}</h6>
+        <div className="taskItem__title">{this.props.task.title}</div>
       </div>
     );
   }
