@@ -3,6 +3,7 @@ import Tasks from "./components/tasks/Tasks";
 import TopNav from "./components/nav/topNav/TopNav";
 import SideNav from "./components/nav/sideNav/SideNav";
 import BackDrop from "./components/backDrop/BackDrop";
+import Login from "./components/login/Login";
 import "./App.css";
 
 class App extends React.Component {
@@ -75,6 +76,7 @@ class App extends React.Component {
         <div className="tasks">
           <Tasks tasks={this.state.tasks} />
         </div>
+        <Login />
       </div>
     );
   }
