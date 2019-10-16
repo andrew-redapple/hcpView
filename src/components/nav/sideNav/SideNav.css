@@ -111,7 +111,7 @@
   }
 
   .sideNav__tasks {
-    margin: 10%;
+    margin: 15%;
   }
 
   .sideNav__tasks .taskItem .taskItem__title {
@@ -127,9 +127,44 @@
   }
 
   .sideNav ul {
-    height: 270px;
+    height: 210px;
   }
 }
 
-@media (min-width: 769px) {
+@media (max-width: 667px) {
+  .sideNav {
+    max-width: 250px;
+  }
+
+  .sideNav ul {
+    height: 80px;
+  }
+
+  .sideNav li {
+    margin: 0;
+  }
+
+  .sideNav__tasks {
+    margin: 5% 0 0 14%;
+  }
+
+  .sideNav__profileImg {
+    margin-left: 34%;
+    width: 33%;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .sideNav ul {
+    height: 370px;
+  }
+
+  .sideNav li {
+    margin: 0.5rem 0;
+  }
+
+  .sideNav__profileImg {
+    height: 12%;
+  }
 }

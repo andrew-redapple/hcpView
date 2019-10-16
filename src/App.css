@@ -29,11 +29,6 @@ html {
 }
 
 @media (max-width: 768px) {
-  .tasks {
-    /* width: 100%; */
-    /* height: 100vh; */
-    margin-left: 27px;
-  }
 }
 
 .App {
