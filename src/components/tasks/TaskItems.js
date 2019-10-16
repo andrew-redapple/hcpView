@@ -1,19 +1,10 @@
 import React, { Component } from "react";
-// import { render } from "react-dom";
-// import { Container, Row, Col } from "react-bootstrap";
+
 import "./TaskItems.css";
 
 export class TaskItems extends Component {
   render() {
     return (
-      // <Container>npm
-
-      //     {/* <Row className="show-grid"> */}
-      //         {/* <Col xs={1} md={4}></Col> */}
-      //         <Col xs={4} md={4}>{ this.props.task.title }</Col>
-      //         {/* <Col xs={1} md={4}></Col> */}
-      //     {/* </Row> */}
-      // </Container>
       <div className="taskItem">
         <div className="taskItem__title">{this.props.task.title}</div>
       </div>
