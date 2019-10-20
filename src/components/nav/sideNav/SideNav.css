@@ -75,6 +75,20 @@
   -moz-flex-wrap: wrap;
 }
 
+@media (max-width: 375px) {
+  .sideNav ul {
+    height: 370px;
+  }
+
+  .sideNav li {
+    margin: 0.5rem 0;
+  }
+
+  .sideNav__profileImg {
+    height: 12%;
+  }
+}
+
 @media (min-width: 769px) {
   .sideNav__profileImg {
     width: 180px;
@@ -87,7 +101,7 @@
   }
 
   .sideNav ul {
-    height: 760px;
+    height: 260px;
   }
 
   .sideNav__tasks .taskItem {
@@ -127,7 +141,7 @@
   }
 
   .sideNav ul {
-    height: 210px;
+    height: auto;
   }
 }
 
@@ -170,17 +184,18 @@
     height: 15%;
   }
 }
-
-@media (max-width: 375px) {
+/* Galaxy S5 */
+@media (max-width: 360px) and (max-height: 640px) {
   .sideNav ul {
-    height: 370px;
+    height: 330px;
   }
-
-  .sideNav li {
-    margin: 0.5rem 0;
-  }
-
   .sideNav__profileImg {
-    height: 12%;
+    margin-left: 32%;
+    width: 40%;
+    height: 15%;
+  }
+
+  .sideNav__tasks {
+    margin: 5% 0 0 15%;
   }
 }

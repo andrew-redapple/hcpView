@@ -6,7 +6,8 @@
 body,
 html {
   font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.4;
+  /* line-height: 1.4; */
+  height: 100%;
 }
 
 .tasks {
@@ -28,9 +29,10 @@ html {
   margin-left: 8px;
 }
 
-@media (max-width: 768px) {
-}
-
-.App {
+/* .App {
   height: 100%;
+} */
+
+.pages {
+  text-align: center;
 }

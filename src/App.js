@@ -1,10 +1,15 @@
 import React from "react";
-import { Route, Router } from "react-router";
-import Tasks from "./components/tasks/Tasks";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Tasks from "./components/pages/tasks/Tasks";
 import TopNav from "./components/nav/topNav/TopNav";
 import SideNav from "./components/nav/sideNav/SideNav";
 import BackDrop from "./components/backDrop/BackDrop";
-import Login from "./components/login/Login";
+import Login from "./components/pages/login/Login";
+
+// Pages
+import Home from "./components/pages/home/Home";
+import Appt from "./components/pages/appt/Appt";
+import Analytics from "./components/pages/analytics/Analytics";
 import "./App.css";
 
 class App extends React.Component {
@@ -93,10 +98,17 @@ class App extends React.Component {
         <TopNav hamburgerClickHandler={this.sideNavClickHandler} />
         <SideNav show={this.state.sideNavOpen} tasks={this.state.tasks} />
         {backDrop}
-        <div className="tasks">
+        {/* <div className="tasks">
           <Tasks tasks={this.state.tasks} />
-        </div>
-        <Login />
+        </div> */}
+        {/* <Login /> */}
+        <Router>
+          <div className="pages">
+            <Route path="/" exact component={Home} />
+            <Route path="/appt" component={Appt} />
+            <Route path="/analytics" component={Analytics} />
+          </div>
+        </Router>
       </div>
     );
   }

@@ -1,8 +1,8 @@
 import React from "react";
 import "./SideNav.css";
 import "../../../App.css";
-import "../../tasks/TaskItems.css";
-import TaskItems from "../../tasks/TaskItems";
+import "../../pages/tasks/TaskItems.css";
+import TaskItems from "../../pages/tasks/TaskItems";
 
 export default function SideNav(props) {
   let sideNavClasses = "sideNav";
