@@ -1,10 +1,22 @@
+.sideTopNav {
+  width: 100%;
+  position: "fixed";
+  background: #e00543;
+  top: 0;
+  left: 0;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
 .sideNav {
   height: 100%;
   background: #f4f4f4;
   box-shadow: 3px 0px 5px rgba(0, 0, 0, 0.5);
   position: fixed;
   width: 70%;
-  max-width: 500px;
+  max-width: 350px;
   top: 0;
   left: 0;
   z-index: 200;
@@ -24,23 +36,38 @@
   display: -ms-flexbox;
   display: -webkit-flex;
   flex-direction: column;
-  justify-content: flex-end;
-}
-
-.sideNav li {
-  margin: 0.5rem 0;
-  text-align: center;
+  /* justify-content: flex-end; */
 }
 
 .sideNav a {
   color: #e00543;
+  /* background: #d3d3d3; */
   text-decoration: none;
+  margin: 5px auto;
+  display: flex;
+  height: 90px;
+  width: 100%;
+}
+
+.sideNav li {
+  /* margin: 0.5rem 0; */
+  /* text-align: center; */
+  /* height: 50px; */
+  height: 50%;
+  width: 60%;
+  vertical-align: center;
+  margin: auto;
+  padding-bottom: 24px;
+}
+
+svg {
+  margin-right: 15px;
 }
 
 .sideNav a:hover,
 .sideNav a:active {
   text-decoration: none;
-  color: #fdb827;
+  color: #78ab46;
 }
 
 .separator {
@@ -59,6 +86,7 @@
   border: solid black;
   border-radius: 50%;
   margin-top: 60px;
+  margin-bottom: 60px;
 }
 
 .sideNav__tasks {
@@ -91,9 +119,9 @@
 
 @media (min-width: 769px) {
   .sideNav__profileImg {
-    width: 180px;
-    height: 180px;
-    margin-left: 32%;
+    width: 33%;
+    height: 12.5%;
+    margin-left: 33%;
   }
 
   .sideNav__tasks {
@@ -188,11 +216,13 @@
 @media (max-width: 360px) and (max-height: 640px) {
   .sideNav ul {
     height: 330px;
+    padding-left: 10px;
   }
   .sideNav__profileImg {
     margin-left: 32%;
     width: 40%;
     height: 15%;
+    margin-bottom: 0;
   }
 
   .sideNav__tasks {

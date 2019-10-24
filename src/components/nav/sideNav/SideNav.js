@@ -2,7 +2,19 @@ import React from "react";
 import "./SideNav.css";
 import "../../../App.css";
 import "../../pages/tasks/TaskItems.css";
-import TaskItems from "../../pages/tasks/TaskItems";
+// import TaskItems from "../../pages/tasks/TaskItems";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHome,
+  faChartArea,
+  faCalendarCheck,
+  faCommentAlt,
+  faCog,
+  faSignOutAlt
+} from "@fortawesome/free-solid-svg-icons";
+
+import HamburgerButton from "../sideNav/HamburgerButton";
 
 export default function SideNav(props) {
   let sideNavClasses = "sideNav";
@@ -15,23 +27,55 @@ export default function SideNav(props) {
   }
   return (
     <nav className={sideNavClasses}>
-      <div className="sideNav__profileImg"></div>
-      <div className="sideNav__tasks">
-        {props.tasks.map(task => (
-          <TaskItems key={task.id} task={task} />
-        ))}
+      <div className="sideTopNav">
+        <HamburgerButton style={topNav} click={props.hamburgerClickHandler} />
       </div>
+      <div className="sideNav__profileImg"></div>
 
-      <div className="spacing"></div>
       <ul>
-        <div className="separator" />
-        <li>
-          <a href="/">Settings</a>
-        </li>
-        <li>
-          <a href="/">Logout</a>
-        </li>
+        <Link to="/">
+          <li>
+            <FontAwesomeIcon icon={faHome} />
+            Home
+          </li>
+        </Link>
+        <Link to="/analytics">
+          <li>
+            <FontAwesomeIcon icon={faChartArea} />
+            Analytics
+          </li>
+        </Link>
+        <Link to="/appt">
+          <li>
+            <FontAwesomeIcon icon={faCalendarCheck} />
+            Appointments
+          </li>
+        </Link>
+        <Link to="/messages">
+          <li>
+            <FontAwesomeIcon icon={faCommentAlt} />
+            Messages
+          </li>
+        </Link>
+        <Link to="/settings">
+          <li>
+            <FontAwesomeIcon icon={faCog} />
+            Settings
+          </li>
+        </Link>
+        <Link to="/logout">
+          <li>
+            <FontAwesomeIcon icon={faSignOutAlt} />
+            Logout
+          </li>
+        </Link>
       </ul>
     </nav>
   );
 }
+
+let topNav = {
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center"
+};

@@ -1,0 +1,30 @@
+.summary {
+  height: 50%;
+  width: 60%;
+  /* border: solid 1px red; */
+  align-items: center;
+  text-align: center;
+  margin: 0 20%;
+  background: #d3d3d3;
+  position: fixed;
+  margin-top: 10px;
+}
+
+.summary__title {
+  font-size: 2rem;
+  color: red;
+  vertical-align: center;
+  text-align: center;
+  line-height: inherit;
+  position: relative;
+  float: left;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media (max-width: 768px) {
+  .summary__title {
+    font-size: 1rem;
+  }
+}
