@@ -12,6 +12,14 @@ import { Link } from "react-router-dom";
 export default function topNav(props) {
   console.log(props.questionMarkClickHandler);
   console.log(props.videoCarouselOpen);
+
+  let iconStyle;
+ 
+  if (props.videoCarouselOpen) {
+    iconStyle = {
+      display: "none"
+    };
+  }
   return (
     <header className="topNav">
       <nav className="topNav__navigation">
@@ -29,6 +37,7 @@ export default function topNav(props) {
                 <FontAwesomeIcon
                   icon={faQuestionCircle}
                   onClick={props.questionMarkClickHandler}
+                  style={iconStyle}
                 />
               </li>
             </Link>

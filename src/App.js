@@ -43,12 +43,17 @@ class App extends React.Component {
     });
   };
 
+  videoCarouselCollapseHandler = () => {
+    this.setState({ videoCarouselOpen: false });
+  };
+
   render() {
     let backDrop;
     let topNav = (
       <TopNav
         hamburgerClickHandler={this.sideNavClickHandler}
         questionMarkClickHandler={this.videoCarouselClickHandler}
+        videoCarouselOpen={this.state.videoCarouselOpen}
       />
     );
 
@@ -63,6 +68,7 @@ class App extends React.Component {
         <TopNav
           hamburgerClickHandler={this.sideNavClickHandler}
           questionMarkClickHandler={this.videoCarouselClickHandler}
+          videoCarouselOpen={this.state.videoCarouselOpen}
         />
       );
     }
@@ -91,7 +97,10 @@ class App extends React.Component {
                 exact
                 // component={Home}
                 render={props => (
-                  <Home videoCarouselOpen={this.state.videoCarouselOpen} />
+                  <Home
+                    videoCarouselOpen={this.state.videoCarouselOpen}
+                    videoCarouselClose={this.videoCarouselCollapseHandler}
+                  />
                 )}
               />
               <Route path="/appt" component={Appt} />
@@ -107,4 +116,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+  export default App;

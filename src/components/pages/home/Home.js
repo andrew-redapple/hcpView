@@ -6,11 +6,9 @@ import "./Home.css";
 
 export class Home extends Component {
   render() {
-    // let videoCarouselClasses = "videoCarousel";
+    console.log(this.props.videoCarouselOpen);
+    console.log(this.props.videoCarouselClose);
 
-    // if (this.state.videoCarouselOpen) {
-    //   videoCarouselClasses = "videoCarousel closed";
-    // }
     return (
       <div>
         <div
@@ -21,7 +19,7 @@ export class Home extends Component {
           <FontAwesomeIcon
             icon={faChevronCircleUp}
             style={{ color: "red", height: "50px", width: "50px" }}
-            onClick={(this.props.videoCarouselOpen = false)}
+            onClick={this.props.videoCarouselClose}
           />
         </div>
         <div className="summary">

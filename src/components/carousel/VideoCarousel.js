@@ -3,8 +3,6 @@ import { Carousel } from "react-bootstrap";
 import img1 from "./img/health1.jpg";
 import img2 from "./img/health2.jpg";
 import img3 from "./img/health3.jpg";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronCircleUp } from "@fortawesome/free-solid-svg-icons";
 import "./VideoCarousel.css";
 
 export default function VideoCarousel(props) {
@@ -19,7 +17,6 @@ export default function VideoCarousel(props) {
           width={"50%"}
         />
         <Carousel.Caption></Carousel.Caption>
-
       </Carousel.Item>
       <Carousel.Item>
         <img
@@ -30,7 +27,6 @@ export default function VideoCarousel(props) {
           width={"50%"}
         />
         <Carousel.Caption></Carousel.Caption>
-        <FontAwesomeIcon icon={faChevronCircleUp} style={{ color: "red" }} />
       </Carousel.Item>
       <Carousel.Item>
         <img
@@ -41,7 +37,6 @@ export default function VideoCarousel(props) {
           width={"50%"}
         />
         <Carousel.Caption></Carousel.Caption>
-        <FontAwesomeIcon icon={faChevronCircleUp} style={{ color: "red" }} />
       </Carousel.Item>
     </Carousel>
   );
