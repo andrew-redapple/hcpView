@@ -6,7 +6,6 @@ export default function Login() {
     <div className="login">
       <form action="post" className="login__form">
         <div className="login__header">Login</div>
-
         <div className="email">
           {/* <label htmlFor="email" className="email__label">
             Email
@@ -32,7 +31,6 @@ export default function Login() {
             placeholder="Password"
           />
         </div>
-
         <button type="submit" name="submit"></button>
       </form>
     </div>

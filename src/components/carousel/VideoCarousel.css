@@ -2,6 +2,7 @@
   margin: 0 20%;
   /* border: 1px solid red; */
   height: inherit;
+  width: inherit;
 }
 
 .carousel__title {
@@ -16,11 +17,15 @@
 
 .fa-chevron-circle-up {
   z-index: 9999;
-  /* display: flex; */
+  display: flex;
   /* flex-direction: column; */
   position: absolute;
   height: 100%;
   width: 100%;
+}
+
+.spacing {
+  flex: 1;
 }
 
 .videoCarousel {
@@ -30,6 +35,9 @@
   position: relative;
   overflow: auto;
   margin: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
 }
 
 .carousel-inner {
@@ -56,6 +64,7 @@
 
 .carousel-item {
   height: inherit;
+  width: inherit;
 }
 
 .videoCarousel.close {

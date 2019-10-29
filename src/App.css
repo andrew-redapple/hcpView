@@ -8,6 +8,16 @@ html {
   font-family: Arial, Helvetica, sans-serif;
   /* line-height: 1.4; */
   height: 100%;
+  /* background: url("./img/doc_icons_bkgrd.png") no-repeat; */
+  /* background: url("./img/doc_illus_bkgrd.jpg") no-repeat; */
+  /* background: url("./img/medical_icon_bkgrd.png") no-repeat; */
+  background: url("./img/medical_icon_bkgrd_2.png") no-repeat;
+  /* background: url("./img/medical_icon_bkgrd_3.jpg") no-repeat; */
+  /* background: url("./img/medical_icon_bkgrd_4.jpg") no-repeat; */
+
+
+  background-size: cover;
+  background-position: center center;
 }
 
 .tasks {

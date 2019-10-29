@@ -20,9 +20,9 @@ import "./App.css";
 class App extends React.Component {
   state = {
     sideNavOpen: false,
-    videoCarouselOpen: false
+    videoCarouselOpen: false,
+    windowWidth: window.innerWidth
   };
-
   sideNavClickHandler = () => {
     this.setState(prevState => {
       return {
@@ -46,7 +46,6 @@ class App extends React.Component {
   videoCarouselCollapseHandler = () => {
     this.setState({ videoCarouselOpen: false });
   };
-
   render() {
     let backDrop;
     let topNav = (
@@ -56,8 +55,6 @@ class App extends React.Component {
         videoCarouselOpen={this.state.videoCarouselOpen}
       />
     );
-
-    // let tasks = this.state.tasks;
 
     if (this.state.sideNavOpen) {
       backDrop = <BackDrop click={this.backDropClickHandler} />;
@@ -72,7 +69,6 @@ class App extends React.Component {
         />
       );
     }
-
     return (
       <div className="App">
         {/* <div className="tasks">
@@ -100,12 +96,43 @@ class App extends React.Component {
                   <Home
                     videoCarouselOpen={this.state.videoCarouselOpen}
                     videoCarouselClose={this.videoCarouselCollapseHandler}
+                    windowWidth={this.state.windowWidth}
                   />
                 )}
               />
-              <Route path="/appt" component={Appt} />
-              <Route path="/analytics" component={Analytics} />
-              <Route path="/messages" component={Message} />
+              <Route
+                path="/appts"
+                // component={Appt}
+                render={props => (
+                  <Appt
+                    videoCarouselOpen={this.state.videoCarouselOpen}
+                    videoCarouselClose={this.videoCarouselCollapseHandler}
+                    windowWidth={this.state.windowWidth}
+                  />
+                )}
+              />
+              <Route
+                path="/analytics"
+                // component={Analytics}
+                render={props => (
+                  <Analytics
+                    videoCarouselOpen={this.state.videoCarouselOpen}
+                    videoCarouselClose={this.videoCarouselCollapseHandler}
+                    windowWidth={this.state.windowWidth}
+                  />
+                )}
+              />
+              <Route
+                path="/messages"
+                // component={Message}
+                render={props => (
+                  <Message
+                    videoCarouselOpen={this.state.videoCarouselOpen}
+                    videoCarouselClose={this.videoCarouselCollapseHandler}
+                    windowWidth={this.state.windowWidth}
+                  />
+                )}
+              />
               <Route path="/settings" component={Settings} />
               <Route path="/logout" component={Logout} />
             </div>
@@ -116,4 +143,4 @@ class App extends React.Component {
   }
 }
 
-  export default App;
+export default App;

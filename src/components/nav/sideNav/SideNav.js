@@ -39,16 +39,16 @@ export default function SideNav(props) {
             Home
           </li>
         </Link>
+        <Link to="/appts">
+          <li>
+            <FontAwesomeIcon icon={faCalendarCheck} />
+            Appointments
+          </li>
+        </Link>
         <Link to="/analytics">
           <li>
             <FontAwesomeIcon icon={faChartArea} />
             Analytics
-          </li>
-        </Link>
-        <Link to="/appt">
-          <li>
-            <FontAwesomeIcon icon={faCalendarCheck} />
-            Appointments
           </li>
         </Link>
         <Link to="/messages">
