@@ -10,8 +10,17 @@
   margin-top: 10px;
   box-shadow: 6px 0px 10px rgba(0, 0, 0, 0.5);
   border-radius: 10px;
+  opacity: 0.9;
+  background: #301934;
+  color: #d3d3d3;
+}
 
+#patients {
+  color: #d3d3d3;
+}
 
+.btn-success {
+  margin: 5px;
 }
 
 .appt__title {
